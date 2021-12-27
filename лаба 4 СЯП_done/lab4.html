@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>lab4</title>
+    <link href="tasks.css" rel="stylesheet">
+    <style>
+        /*html {
+            background: url(d.gif);
+            background-size: 100%;
+        }
+        body{
+            background: url(light2.gif);
+            background-size: 100%;
+        }*/
+        .semiopacity {
+            border: 5px solid DarkBlue;
+            width: 1000px;
+            height: 100px;  
+        }
+    </style>
+    <script>
+function ex1(){
+    document.write("<p align=\"center\">", "ЗАДАНИЕ №1", "</p>");
+    function Group(spec, group, numofstud){
+    this.spec=spec;
+    this.group=group;
+    this.numofstud=numofstud;
+    this.add_stud=function(addnumber){
+    this.numofstud+=addnumber;
+    document.write("<table class= \"semiopacity \"", "<tr>", "<td colspan=\"2\" class=\"col1\">", "На специальность ", this.spec , " в ", this.group, " группу добавили ", addnumber, " cтудентов ", " Теперь в группе ", this.numofstud, "</td>", "</tr>", "</table>", "</br>")
+}
+
+//Прототипы - это механизм, с помощью которого объекты JavaScript наследуют свойства друг от друга. 
+
+//C помощью prototype добавим объекту свойство kurs
+//экземпляры объекта будут иметь это свойство
+this.sub_stud=function(subnumber){
+    this.numofstud-=subnumber;
+    document.write("<table class= \"semiopacity \"", "<tr>", "<td colspan=\"2\" class=\"col1\">", "На специальности ", this.spec , " в ", this.group, " группе исключили ", subnumber, " cтудентов ", " Теперь в группе ", this.numofstud, "</td>", "</tr>", "</table>", "</br>")
+}
+
+}
+    group_isit= new Group('ИСиТ',1,30);
+    group_poit= new Group('ПОИТ',3,29);
+    group_isit.add_stud(3);
+    group_poit.sub_stud(15);
+
+}
+
+function ex2(){
+    document.write("<p align=\"center\">", "ЗАДАНИЕ №2", "</p>");
+    function students(name, surname, gr){
+    this.gr=gr;
+    this.name=name;
+    this.surname=surname;
+    this.average_score=function(fizmark, mathmark, itmark){
+    this.fizmark=fizmark;
+    this.mathmark=mathmark;
+    this.itmark=itmark;
+    //средний результат
+    score=((itmark+mathmark+fizmark)/3);
+    score=score.toFixed(2);
+    document.write("<table class= \"semiopacity \"", "<tr>", "<td colspan=\"2\" class=\"col1\">", this.gr, "&nbsp Группа &nbsp", this.name, "&nbsp", this.surname, "&nbsp Средний балл &nbsp", score, "</td>", "</tr>", "</table>", "</br>");
+    }
+}
+    student1= new students('Евгений','Макаров',1);
+    student2= new students('Иван','Иванов',3);
+    student3= new students('Петр','Петров',2);
+    student1.average_score(9,6,3);
+    student2.average_score(7,3,1);
+    student3.average_score(4,9,2);   
+}
+
+function ex3(){
+    document.write("<p align=\"center\">", "ЗАДАНИЕ №3", "</p>");
+    let full_name = new String("Макаров Евгений Викторович");
+                let arr = new Array("pow", "pop", "push", "shift", "round", "floor", "slice", "sort");
+                document.write("<table class= \"semiopacity \"", "<tr>", "<td class=\"col1\">", "Исходный массив:", "</td>", "<td class=\"col1\">", arr, "</td>" , "</tr>");
+                delete arr[2];
+                document.write("<tr>", "<td class=\"col1\">", "После удаления третьего элемента", "</td>", "<td class=\"col1\">", arr, "</td>" , "</tr>", "</table>");
+                document.write("<table class= \"semiopacity \"", "<tr>", "<td class=\"col1\">", "Проверка наличия свойств (in).", "</td>" , "</tr>");
+                document.write("<tr>", "<td class=\"col1\">", "Проверить, имеется ли у массива 2-й элемент." , "</td>", "<td class=\"col1\">", 1 in arr, "</td>" , "</tr>"); //проверить, есть ли элемент с номером 1 в массиве arr.
+                document.write("<tr>", "<td class=\"col1\">", "проверить, есть ли свойство spec у объекта group1" , "</td>", "<td class=\"col1\">", "spec" in group_isit, "</td>" , "</tr>"); // проверить, есть ли свойство spec у объекта group_isit;
+                document.write("<tr>", "<td class=\"col1\">", "проверить, есть ли свойство spec у объекта student1" , "</td>", "<td class=\"col1\">", "spec" in student1, "</td>" , "</tr>", "</table>"); // проверить, есть ли свойство spec у объекта student1;
+               
+                document.write("<table class= \"semiopacity \"", "<tr>", "<td class=\"col1\">", "Являются ли созданные объекты объектами Array" , "</td>", "<td class=\"col1\">", arr instanceof Array, "</td>" , "</tr>");
+                document.write("<tr>", "<td class=\"col1\">", "Являются ли созданные объекты объектами String" , "</td>", "<td class=\"col1\">", full_name instanceof String, "</td>" , "</tr>");
+                document.write("<tr>", "<td class=\"col1\">", "Являются ли созданные объекты объектами Object" , "</td>", "<td class=\"col1\">", student1 instanceof Object, "</td>" , "</tr>", "</table>");
+          }
+function ex4(){
+    document.write("<table class= \"semiopacity \"", "<tr>", "<td class=\"col1\">","возвращает значение 5" , "</td>" ,"<td class=\"col1\">", typeof 5, "</td>" , "</tr>");
+    document.write("<tr>", "<td class=\"col1\">","тип свойста spec объекта group_isit" , "</td>" ,"<td class=\"col1\">", typeof group_isit.spec, "</td>" , "</tr>");
+    document.write("<tr>", "<td class=\"col1\">","тип свойста numofstud объекта group_isit" , "</td>" ,"<td class=\"col1\">", typeof group_isit.numofstud, "</td>" , "</tr>");
+    document.write("<tr>", "<td class=\"col1\">","тип свойста group объекта group_isit" , "</td>" ,"<td class=\"col1\">", typeof group_isit.group, "</td>" , "</tr>");
+    document.write("<tr>", "<td class=\"col1\">","тип свойста spec объекта student1" , "</td>" ,"<td class=\"col1\">", typeof student1.name, "</td>" , "</tr>");
+    document.write("<tr>", "<td class=\"col1\">","тип свойста numofstud объекта student1" , "</td>" ,"<td class=\"col1\">", typeof student1.surname, "</td>" , "</tr>");
+    document.write("<tr>", "<td class=\"col1\">","тип свойста group объекта student1" , "</td>" ,"<td class=\"col1\">", typeof student1.gr, "</td>" , "</tr>");
+    document.write("<tr>", "<td class=\"col1\">","тип объекта new String" , "</td>" ,"<td class=\"col1\">", typeof new String, "</td>" , "</tr>");
+    document.write("<tr>", "<td class=\"col1\">","тип объекта new Array" , "</td>" ,"<td class=\"col1\">", typeof new Array, "</td>" , "</tr>", "</table>");
+} 
+
+</script>
+</head>
+<body>
+    <script>
+        ex1();
+        ex2();
+        ex3();
+        ex4();
+</script>
+</body>
+</html>
+

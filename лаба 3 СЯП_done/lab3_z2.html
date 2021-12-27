@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>lab3_z1</title>
+    <link href="tasks.css" rel="stylesheet">
+    <style>
+    html {
+        background: url(matr.jpg);
+       }
+    </style>
+    <script>
+        function array(){
+                let arr = new Array("pow", "pop", "push", "shift", "round", "floor", "slice", "sort");
+                let arr_methods1 = arr.slice(1,4);        //pop,push,shift
+                let arr_methods2 = arr.slice(6,8);        //slice,sort
+                let array_methods = arr_methods1.concat(arr_methods2); //pop,push,shift,slise,sort
+
+                let math_methods1 = arr.slice(0,1);        //pow
+                let math_methods2 = arr.slice(4,6);        //round,floor
+                let math_methods = math_methods1.concat(math_methods2); //pow,round,floor
+
+                let word_concat = [("concat")];
+                array_methods = word_concat.concat(array_methods);  // concat,pop,push,shift,slise,sort
+                math_methods = math_methods.concat("exp");          //pow,round,floor,epx
+
+                document.write("<p align=\"center\">", "ЗАДАНИЕ №2", "</p>");
+                document.write("<table class= \"semiopacity \"");
+                document.write("<tr>", "<td class=\"col1\">", "Исходный массив:", "</td>", "<td class=\"col1\">", arr, "</td>" , "</tr>");
+                document.write("<tr>", "<td class=\"col1\">", "Массив методов объекта Array:", "</td>", "<td class=\"col1\">", array_methods, "</td>" , "</tr>");
+                document.write("<tr>", "<td class=\"col1\">", "Длина массива методов Array", "</td>", "<td class=\"col1\">", array_methods.length," элементов.", "</td>" , "</tr>");
+                document.write("<tr>", "<td class=\"col1\">", "Массив методов объекта Math:    ", "</td>", "<td class=\"col1\">", math_methods, "</td>", "</tr>");
+                document.write("<tr>", "<td class=\"col1\">", "Длина массива методов Math", "</td>", "<td class=\"col1\">", math_methods.length, " элементa.", "</td>" , "</tr>");
+                document.write("</table>")
+            }
+    </script>
+</head>
+<body>
+    <script>
+        array()
+    </script>
+</body>
+</html>

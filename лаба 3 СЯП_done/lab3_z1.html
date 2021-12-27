@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>lab3_z1</title>
+    <link href="tasks.css" rel="stylesheet">
+    <style>
+        html {
+    background: url(light1.gif);
+    background-size:12.5%;
+   }
+    </style>
+    <script>
+        var a=6*(Math.PI)^2 + 3*(Math.E)^8;
+        var b=2*Math.cos(4)+Math.cos(12)+8*(Math.E)^3;
+        var c=3*Math.sin(9) + Math.log(5) + Math.sqrt(3);
+        var d=2*Math.tan(5) + 6*Math.PI + Math.sqrt(12);
+        var spec = new Array(a,b,c,d);
+
+        var max_index = spec.indexOf(Math.max.apply(null, spec));
+        var min_index = spec.indexOf(Math.min.apply(null, spec));
+
+        function array(){
+        document.write("<p align=\"center\">", "ЗАДАНИЕ №1", "</p>");
+           document.write("<table class= \"semiopacity \"");
+           document.write("<tr>", "<td class=\"col1\">", "Первый элемент массива:   ", "</td>", "<td class=\"col1\">", a, "</td>" , "</tr>");
+           document.write("<tr>", "<td class=\"col1\">", "Второй элемент массива:   ", "</td>", "<td class=\"col1\">", b, "</td>" , "</tr>");
+           document.write("<tr>", "<td class=\"col1\">", "Третий элемент массива:   ", "</td>", "<td class=\"col1\">", c, "</td>" , "</tr>");
+           document.write("<tr>", "<td class=\"col1\">", "Четвертый элемент массива:   ", "</td>", "<td class=\"col1\">", d, "</td>", "</tr>");
+           document.write("<tr>", "<td class=\"col1\">", "Наибольшее значение: ", Math.max(a,b,c,d), "</td>", "<td class=\"col1\">", "    ", "Номер элемента: ", max_index, "</td>" , "</tr>");
+           document.write("<tr>", "<td class=\"col1\">", "Наименьшее значение: ", Math.min(a,b,c,d), "</td>", "<td class=\"col1\">", "    ", "Номер элемента: ", min_index, "</td>" , "</tr>");
+        document.write("</table>")
+    }
+    </script>
+</head>
+<body>
+    <script>
+        array()
+    </script>
+</body>
+</html>
+
+
+

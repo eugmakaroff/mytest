@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>lab4_z1</title>
+<script>
+function ex1(){
+    document.write("<p align=\"center\">", "ЗАДАНИЕ №1", "</p>");
+    function Group(spec, group, numofstud){
+    this.spec=spec;
+    this.group=group;
+    this.numofstud=numofstud;
+    this.add_stud=function(addnumber){
+    this.numofstud+=addnumber;
+    document.write("<table class= \"semiopacity \"", "<tr>", "<td colspan=\"2\" class=\"col1\">", "На специальность ", this.spec , " в ", this.group, " группу добавили ", addnumber, " cтудентов ", " Теперь в группе ", this.numofstud, "</td>", "</tr>", "</table>", "</br>")
+}
+
+this.sub_stud=function(subnumber){
+    this.numofstud-=subnumber;
+    document.write("<table class= \"semiopacity \"", "<tr>", "<td colspan=\"2\" class=\"col1\">", "На специальности ", this.spec , " в ", this.group, " группе исключили ", subnumber, " cтудентов ", " Теперь в группе ", this.numofstud, "</td>", "</tr>", "</table>", "</br>")
+}
+
+}
+    group_isit= new Group('ИСиТ',1,30);
+    group_poit= new Group('ПОИТ',3,29);
+    group_isit.add_stud(3);
+    group_poit.sub_stud(15);
+    Group.prototype.kurs=this.kurs
+    group_isit.kurs=2
+document.write(group_isit.kurs)
+}
+    </script>
+    </head>
+    <body>
+        <script>
+            ex1();
+        </script>
+    </body>
+</html>

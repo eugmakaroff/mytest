@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>lab2_z2</title>
+    <style>
+        table {
+            border: 5px solid black;
+            border-bottom: 3px solid black;
+            background: linear-gradient(45deg, #ADFF2F, #98FB98);
+            color: black;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        let a = prompt("Введите a:"),
+            b = prompt("Введите b:");
+        function table() {
+            document.write("<table border= \" 1 \" cellspacing= \" 0 \" cellpadding= \"2 \"align= \"center \" >")
+            for (let i = 1; i <= a; i++)
+            {
+                document.write("<tr>");
+                for (let j = 1; j <= b; j++)
+                {
+                    document.write("<td>" + (i * j) + "</td>")
+                }
+                document.write("</tr>")
+            }
+            document.write("</table>")
+        }
+    </script>
+</head>
+<body bgcolor="LightGreen">
+    <script>
+        table()
+    </script>
+    <a href="gl2_lab2.html"><h1>На главную</h1></a>
+</body>
+</html>
