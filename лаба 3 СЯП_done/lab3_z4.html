@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>lab3_z1</title>
+    <link href="tasks.css" rel="stylesheet">
+    <style>
+        html {
+            background: url(mine.png);
+            background-size: 100%;
+        }
+        body{
+            background: url(котик.gif);
+            background-size: 50%;
+        }
+        .semiopacity{
+            width: 250px;
+            height: 350px;
+            font-size: 20px;
+        }
+        p{
+            color:black;
+        }
+    </style>
+    <script>
+            function table(){
+                let date = new Date();
+                let year = date.getFullYear();
+                let mounth = date.getMonth();
+                let day = date.getDate();
+                let hour = date.getHours();
+                let minuts = date.getMinutes();
+                let seconds = date.getSeconds();
+                document.write("<p align=\"center\">", "ЗАДАНИЕ №4", "</p>");
+                document.write("<table class= \"semiopacity \"");
+                    document.write("<tr>" + "<td>" + "Год" + "</td>" + "<td>" + year + "</td>" + "</tr>");
+                    document.write("<tr>" + "<td>" + "Месяц" + "</td>" + "<td>" + mounth + "</td>" + "</tr>");
+                    document.write("<tr>" + "<td>" + "День" + "</td>" + "<td>" + day + "</td>" + "</tr>");
+                    document.write("<tr>" + "<td>" + "Час" + "</td>" + "<td>" + hour + "</td>" + "</tr>");
+                    document.write("<tr>" + "<td>" + "Минуты" + "</td>" + "<td>" + minuts + "</td>" + "</tr>");
+                    document.write("<tr>" + "<td>" + "Секунды" + "</td>" + "<td>" + seconds + "</td>" + "</tr>");
+                document.write("</table>");
+            }
+    </script>
+</head>
+<body background="fon3_1.jpg">
+    <script>
+        table()
+    </script>
+<br><br><br><br><br><br><br><br><br>
+</body>
+</html>

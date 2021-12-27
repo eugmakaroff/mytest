@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>lab2_z4</title>
+    <style>
+        table {
+            border: 5px solid black;
+            border-bottom: 3px solid black;
+            background: linear-gradient(45deg, #008B8B, #8FBC8F);
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        let n2 = prompt("Введите целое число:");
+        let b = new Number(n2);
+        let n1 = prompt("Введите дробное число:");
+        let a = new Number(n1);
+        function table() {
+            document.write("<table border= \" 1 \" cellspacing= \" 0 \" cellpadding= \"2 \"align= \"center \" >");
+            document.write("<tr>" + "<td>" + "Число" + "</td>");
+            document.write("<td>" + "Метод" + "</td>");
+            document.write("<td>" + "Результат" + "</td>");
+            document.write("<td>" + "Описание метода" + "</td>" + "</tr>");
+
+/*for b*/   document.write("<tr>" + "<td>" + b + "</td>");
+            document.write("<td>" + "toPrecision" + "</td>");
+            document.write("<td>" + b.toPrecision(3) + "</td>");
+            document.write("<td>" + "представляет число с заданным общим количеством значащих цифр" + "</td>" + "</tr>");
+
+            document.write("<tr>" + "<td>" + b + "</td>");
+            document.write("<td>" + "toFixed" + "</td>");
+            document.write("<td>" + b.toFixed(1) + "</td>");
+            document.write("<td>" + "представляет число в форме с фиксированным количеством цифр после точки" + "</td>" + "</tr>");
+
+            document.write("<tr>" + "<td>" + b + "</td>");
+            document.write("<td>" + "toString" + "</td>");
+            document.write("<td>" + b.toString(16) + "</td>");
+            document.write("<td>" + "возвращает строковое представление числа в системе счисления с указанным основанием" + "</td>" + "</tr>");
+
+            document.write("<tr>" + "<td>" + b + "</td>");
+            document.write("<td>" + "toExponential" + "</td>");
+            document.write("<td>" + b.toExponential(3) + "</td>");
+            document.write("<td>" + "представляет число в экспоненциальной форме" + "</td>" + "</tr>");
+
+/*for a*/   document.write("<tr>" + "<td>" + a + "</td>");
+            document.write("<td>" + "toString" + "</td>");
+            document.write("<td>" + a.toString(16) + "</td>");
+            document.write("<td>" + "возвращает строковое представление числа в системе счисления с указанным основанием" + "</td>" + "</tr>");
+
+            document.write("<tr>" + "<td>" + a + "</td>");
+            document.write("<td>" + "toExponential" + "</td>");
+            document.write("<td>" + a.toExponential(3) + "</td>");
+            document.write("<td>" + "представляет число в экспоненциальной форме" + "</td>" + "</tr>");
+
+
+            document.write("</table>");
+        }
+    </script>
+</head>
+<body bgcolor="MediumAquamarine">
+    <table>
+        <tr>
+            <td>
+                <script>
+                    table()
+                </script>
+            </td>
+            <td><a href="gl2_lab2.html"><h1>На главную</h1></a></td>
+        </tr>
+    </table>
+</body>
+</html>

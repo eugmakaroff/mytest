@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>lab5</title>
+    <style>
+        .BIG {
+            color: yellow;
+            font-size: 150%;
+        }
+        table{
+            border: 1px solid;
+            border-color: black;
+            text-align: center;
+        }
+        body{
+            background-color: lightsalmon;
+        }
+        h1{
+            text-align: center;
+            font-weight: bold;
+            font-style: italic;
+        }
+        input{
+            width: 500px;
+            height: 100px;
+        }
+        #firstSpan{
+            color: red;
+            font-size: 30px;
+        }
+        #avrID{
+            color: red;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Предмет</th>
+            <th>Оценка</th>
+        </tr>
+        <tr class="forTd">
+            <td>Английский язык</td>
+            <td>10</td>
+        </tr>
+        <tr class="forTd">
+            <td>Физика</td>
+            <td>6</td>
+        </tr>
+        <tr class="forTd">
+            <td>Математика</td>
+            <td>7</td>
+        </tr>
+    </table>
+    <span id="avrID">Средний балл: </span>
+    <div id="firstSpan"></div>
+    <script>
+        function doc1() {
+            document.write("<h2>Теги и номера в коллекции all</h2>");
+            let tags = document.all; //.all - все наши служебные элементы
+            for(let i=0; i < tags.length; i++) {
+                if (i == (tags.length) - 1) {
+                    document.write(tags[i].tagName + "[" + i + "]."); //Атрибут tagName - нужен чтобы показывало только имя элемента
+                }
+                else {
+        document.write(tags[i].tagName + "[" + i + "], ");
+        }
+    }
+}
+    function doc2() {
+        for(let i = 0; i < document.body.children.length; i++) { //children - дочерние элементы нашего body
+            let forBody = document.body.children[i].tagName;
+            alert(forBody);
+        }
+    }
+    function doc3() {
+        document.getElementById("firstSpan").innerHTML += "<h2>Задание 3</h2>"; //innerHTML - взаимодействие с содержимым нашего элемента
+        document.getElementById("firstSpan").innerHTML = document.getElementById("firstSpan").innerHTML + document.querySelectorAll("span")[0].innerHTML + "<br>";
+            //возвращает коллекцию span через all
+            document.getElementById("firstSpan").innerHTML += document.getElementsByTagName("span")[0].innerText + "<br>";
+            //через частную коллекцию(span)
+            document.getElementById("firstSpan").innerHTML += document.getElementById("BIG").innerHTML;
+            //через идентификатор элемента
+    }
+    function doc4() {
+        let sum = 0;
+        for (let i = 1; i <= 3; i++) {
+            let td = document.getElementsByTagName("tr")[i].getElementsByTagName("td")[1].innerHTML;
+            sum += Number(td)
+    }
+    let avr = sum / 3;
+    document.getElementById("avrID").innerHTML = document.getElementById("avrID").innerHTML + avr;
+    }
+    </script>
+    <div>
+        <input type="button" value="First" onclick="doc1()">
+        <input type="button" value="Second" onclick="doc2()">
+        <input type="button" value="Third" onclick="doc3()">
+        <input type="button" value="Fourth" onclick="doc4()">
+    </div>
+    <h1>Животные</h1>
+    <h2>Общие сведения</h2>
+    <h3>Определение</h3>
+    <p>
+        <a href="Животные2.html">Живо́тные </a> (лат. Animalia)
+        — традиционно (со времён Аристотеля) выделяемая категория организмов,
+        в настоящее время рассматриваемая в качестве биологического царства.<span class="BIG">Животные</span> являются основным объектом изучения зоологии.
+        Животные относятся к эукариотам (в клетках имеются ядра). Классическими признаками животных считаются: гетеротрофность (питание готовыми органическими соединениями) и способность активно передвигаться. Впрочем,
+        существует немало животных, ведущих неподвижный образ жизни, а гетеротрофность свойственна грибам и некоторым растениям-паразитам.
+    </p>
+    <h2>
+        <b>Группы животных</b>
+    </h2>
+    <ol>
+        <li>
+            Первичноротые
+            <ul>
+                <li>таксон многоклеточных животных из группы Bilateria</li>
+                <li>В период зародышевого развития на месте их первичного рта (бластопора) образуется рот</li>
+            </ul>
+        </li>
+        <li>
+            Spiralia
+            <ul>
+                <li>огромная группа беспозвоночных животных, включающая моллюсков и кольчатых червей</li>
+                <li>Первые включают, в частности, улиток, двустворок и кальмаров</li>
+                <li>Bторые — дождевых червей и пиявок</li>
+            </ul>
+        </li>
+        <li>
+            Panarthropoda
+            <ul>
+                <li>Panarthropoda (лат.) — таксон беспозвоночных из группы первичноротых (Protostomia), объединяющий членистоногих, тихоходок, онихофор, включая вымершую группу ксенузий</li>
+                <li>Общие черты строения Panarthropoda подчинены законам метамерной симметрии: тело организма включает несколько сходных элементов</li>
+            </ul>
+        </li>
+    </ol>
+    <h2>
+        Группы животных
+    </h2>
+</body>
+</html>

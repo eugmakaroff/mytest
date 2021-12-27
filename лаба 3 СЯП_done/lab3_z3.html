@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>lab3_z1</title>
+    <link href="tasks.css" rel="stylesheet">
+    <style>
+        html {
+            background: url(d.gif);
+            background-size: 100%;
+        }
+        body{
+            background: url(light2.gif);
+            background-size: 100%;
+        }
+        .semiopacity {
+            opacity: 0.7;
+            border: 5px solid DarkBlue;
+            color: white;
+        }
+    </style>
+    <script>
+            function string(){
+                let full_name = new String("Макаров Евгений Викторович");
+                let full_name_upper_case=full_name.toUpperCase();
+                let full_name_lower_case=full_name.toLowerCase();
+                let full_name_both_case=full_name_lower_case.concat(full_name_upper_case);
+                let name = full_name.replace("Макаров Евгений Викторович", "МЕВ");
+                document.write("<p align=\"center\">", "ЗАДАНИЕ №3", "</p>");
+                document.write("<table class= \"semiopacity \"");
+                document.write("<tr>", "<td colspan=\"2\" class=\"col1\">", "Исходная строка: ",  full_name, "; Ее длина " , full_name.length , " символов.", "</td>", "</tr>");
+                document.write("<tr>", "<td class=\"col1\">", "\nИсходная строка в верхнем регистре: ", "</td>", "<td class=\"col1\">", full_name_upper_case, "</td>" , "</tr>");
+                document.write("<tr>", "<td class=\"col1\">", "\nИсходная строка в нижнем регистре: ", "</td>", "<td class=\"col1\">", full_name_lower_case, "</td>" , "</tr>");
+                document.write("<tr>", "<td class=\"col1\">", "\nСовмещение этих строк: ", "</td>", "<td class=\"col1\">", full_name_both_case, "</td>", "</tr>");
+                document.write("</table>")
+            }
+    </script>
+</head>
+<body>
+    <script>
+        string()
+    </script>
+</body>
+</html>

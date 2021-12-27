@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>lab1</title>
+
+    <style>
+        body {
+            background-size: 51%;
+        }
+        .test {
+            height: 90px;
+            width: 127px;
+            background: black;
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        h2 {
+            background: black; 
+            color: white; 
+            padding: 7px; 
+            width: 320px;
+            border: 4px double red;
+        }
+    </style>
+
+    <script>
+        function lab2_1() {
+            alert("Вас приветствует учебный центр");
+        }
+
+        function lab2_1_1() {
+            x = prompt("Введите ваше имя:", "Имя");
+            alert("Добро пожаловать на наши курсы, " + x);
+        }
+
+        function lab2_1_2() {
+            if (confirm("Хотите стать Web-дизайнером?"))
+                alert("Учите CSS и JavaScript!");
+            else
+                alert("Упускаете время!");
+        }
+
+    function lab2_2() {
+        alert("Результат сложения чисел 10 и 5"); alert(10 + 5);
+        alert("Результат сложения строк 10 и 5"); alert("10" + "5");
+        alert("Результат сложения строки 5 и числа 22"); alert(22 + "5");
+        alert("Результат сложения строки 22 и числа 5"); alert("22" + 5);
+        alert("Результатом сложения строки и числа всегда будет строка");
+        }
+
+    function lab2_3() {
+        var x = 10, y = 2,
+            num1 = ((10000 * y) / (x + 1))
+            num2 = ((x - 1) / (y + 1))
+            num3 = num1 % num2;
+        alert("при x=10 и y=2 ((10000*y)/(x+1)=" + num1);
+        alert("при x=10 и y=2 ((x-1)/(y+1))=" + num2);
+        alert(num3);
+        }
+        function lab2_4() {
+            var x = prompt("Введите любое число");
+            if (((x < 20) || (x > 40)) && (x != 100) && (x % 5 == 0))
+                alert("Правильное значение");
+            else
+                alert("Неправильное значение");
+        }
+
+        function lab2_4_1() {
+            var x = prompt("Количество денег в руб.");
+            var a = prompt("Сколько рублей вам хвататет на один день?");
+            var y = prompt("На сколько дней");
+            var b = prompt("Сколько хромосом у картошки?");
+            var c = prompt("Когда началась Вторая мировая война?");
+            if ((x/y)>=a && b==48 && c==1939)
+                alert("Хватит, а еще вы молодец!");
+            else
+                alert("Не хватит и вы не молодец(((");
+        }
+
+        function lab2_5() {
+            var a = prompt("Введите число a");
+            var b = prompt("Введите число b");
+            if (a > b) {
+                alert("a больше, чем b");
+            }
+            else if (a < b) {
+                alert("a меньше, чем b");
+            }
+            else {
+                alert("a = b");
+            }
+        }
+
+        function lab2_5_1() {
+            let a = prompt("Введите число a")
+                b = prompt("Введите число b")
+                c = (a > b) ? "a>b" : "a<b";
+            alert(c);
+        }
+
+        function lab2_6() {
+            let x;
+            x = prompt("Введите число от 1 до 7");
+            switch (x) {
+                case "1": alert("Понедельник"); break;
+                case "2": alert("Вторник"); break;
+                case "3": alert("Среда"); break;
+                case "4": alert("Четверг"); break;
+                case "5": alert("Пятница"); break;
+                case "6": alert("Суббота"); break;
+                case "7": alert("Воскресенье"); break;
+                default: alert("Неверные данные")
+            }
+        }
+
+        function lab2_7() {
+            try {
+                div(oshibka);
+            }
+            catch (err) {
+            }
+                alert("Код продолжил работать, несмотря на ошибку");
+        }
+
+    </script>
+</head>
+<body background="js2.jpg">
+    <h2>&#9989; Лабараторная работа №1</h2>
+    <p>
+        <br><br><br><br><br><br><input class="test" type="button" value="Оповещение" onclick="lab2_1()" />
+        <input class="test" type="button" value="Запрос" onclick="lab2_1_1()" />
+        <input class="test" type="button" value="Выбор да/нет" onclick="lab2_1_2()" /> &nbsp &lArr; Задание №1 &nbsp Задание №2,3,4_1 &rArr; &nbsp
+        <input class="test" type="button" value="Числа и строки" onclick="lab2_2()" />
+        <input class="test" type="button" value="Уравнение" onclick="lab2_3()" />
+        <input class="test" type="button" value="True or false 1" onclick="lab2_4()" /><br><br><br><br><br><br><br><br><br><br>
+        <input class="test" type="button" value="True or false 2" onclick="lab2_4_1()" />
+        <input class="test" type="button" value="Сравнение" onclick="lab2_5()" />
+        <input class="test" type="button" value="Сравнение 2" onclick="lab2_5_1()" /> &nbsp &lArr; Задание №4_2,5_1,5_2 &nbsp Задание №6,7 &rArr; &nbsp
+        <input class="test" type="button" value="День недели" onclick="lab2_6()" />
+        <input class="test" type="button" value="Поиск ошибки" onclick="lab2_7()">
+    </p>
+</body>
+</html>
+
+
